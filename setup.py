@@ -7,7 +7,7 @@ with open("./version.py") as fp:
     exec(fp.read(), version_dict)
 
 setup(
-    nname=PACKAGE_NAME,
+    name=PACKAGE_NAME,
     version=version_dict['__version__'],
     packages=find_packages(include=['snet.*']),
     url='https://github.com/singnet/snet-ecosystem-contracts',
