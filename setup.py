@@ -6,6 +6,10 @@ version_dict = {}
 with open("./version.py") as fp:
     exec(fp.read(), version_dict)
 
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+
 setup(
     name=PACKAGE_NAME,
     version=version_dict['__version__'],

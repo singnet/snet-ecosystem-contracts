@@ -8,9 +8,9 @@ import web3
 
 from web3.contract.contract import Contract
 
-import snet_contracts
+import snet.contracts as contracts
 
-RESOURCES_PATH = PurePath(os.path.dirname(snet_contracts.__file__)).joinpath("contracts")
+RESOURCES_PATH = PurePath(os.path.dirname(contracts.__file__)).joinpath("contracts")
 
 
 def get_contract_object(w3: web3.Web3, contract_file: str, address: Any=None) -> Contract:
