@@ -19,6 +19,8 @@ setup(
     author='SingularityNET Foundation',
     author_email='info@singularitynet.io',
     description='SingularityNET Ecosystem Contracts',
+    long_description=long_description,
+    long_description_content_type='text/markdown'
     license='MIT',
     python_requires='>=3.10',
     install_requires=[
