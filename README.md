@@ -13,7 +13,7 @@ pip install snet.contracts
 
 Usage:
 ```python
-from snet_contracts import get_contract_deployment_block, get_contract_object
+from snet.contracts import get_contract_deployment_block, get_contract_object
 
 import web3
 
