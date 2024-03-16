@@ -1,4 +1,5 @@
 from setuptools import setup, find_packages
+from os import path
 
 PACKAGE_NAME = "snet.contracts"
 
@@ -19,7 +20,7 @@ setup(
     author_email='info@singularitynet.io',
     description='SingularityNET Ecosystem Contracts',
     license='MIT',
-    python_requires='>=3.11',
+    python_requires='>=3.10',
     install_requires=[
         'web3==6.11.1',
     ],

@@ -1,6 +1,6 @@
 # SingularityNET Ecosystem Contracts Package
 
-The package was designed to easily work with SingularityNET ecosystem contracts with Python
+The package was created to easily work with SingularityNET ecosystem EVM contracts with Python
 
 ### Usage
   
