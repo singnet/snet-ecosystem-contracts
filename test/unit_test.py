@@ -41,7 +41,7 @@ class TestGetContractObjectWithNameAndAddress(unittest.TestCase):
     """
     Defining the network by contract addresss and getting contract instance by contract name
     """
-    def test_get_contract_with_name(self):
+    def test_get_contract_with_name_and_address(self):
         # Check if the target class has been obtained
         self.assertEqual(test_get_contract_with_name_and_address(w3, contract_name, address), True)
 
@@ -50,7 +50,7 @@ class TestGetBlockNumberByContractName(unittest.TestCase):
     """
     Getting contract deployment block by contract_name
     """
-    def test_get_contract_with_name(self):
+    def test_get_deployment_block_by_contract_name(self):
         # Check if the target block has been received
         self.assertEqual(test_get_contract_deployment_block_by_contract_name(w3, contract_name), target_block)
 
