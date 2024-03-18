@@ -14,7 +14,8 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 setup(
     name=PACKAGE_NAME,
     version=version_dict['__version__'],
-    packages=find_packages(include=['snet.*']),
+    packages=find_packages(),
+    namespace_packages=['snet']
     url='https://github.com/singnet/snet-ecosystem-contracts',
     author='SingularityNET Foundation',
     author_email='info@singularitynet.io',
