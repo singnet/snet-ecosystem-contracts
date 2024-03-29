@@ -1,8 +1,9 @@
 # SingularityNET Ecosystem Contracts Package
 
-The package was created to easily work with SingularityNET ecosystem EVM contracts with Python
+The package was created to easily work with SingularityNET ecosystem EVM contracts
 
-### Usage
+## Python
+### Usage 
   
 Easily get an instance of the contract you need from any SingularityNET product with just one call to one of the functions
 
@@ -41,4 +42,41 @@ python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python3 test/unit_test.py
+```
+
+## Golang
+
+### Install
+`go get -u github.com/singnet/snet-ecosystem-contracts`
+
+### Usage
+
+```go
+package main
+
+import (
+	"fmt"
+	"github.com/singnet/snet-ecosystem-contracts"
+)
+
+func main() {
+
+	// get list of all contracts
+	fmt.Println(contracts.List)
+	
+	// get ABI of contract Registry
+	fmt.Println(string(contracts.GetABI(contracts.Registry)))
+
+	// get bytecode of contract SingularityNetToken
+	fmt.Println(string(contracts.GetBytecode(contracts.SingularityNetToken)))
+
+	// get addresses, events, and more for smart contracts for different networks
+	fmt.Println(string(contracts.GetNetworks(contracts.Registry)))
+
+	// clean methods returns content without spaces and line breaks
+	fmt.Println(string(contracts.GetABIClean(contracts.SingularityNetToken)))
+	fmt.Println(string(contracts.GetBytecodeClean(contracts.Registry)))
+	fmt.Println(string(contracts.GetNetworksClean(contracts.SingularityNetToken)))
+}
+
 ```
