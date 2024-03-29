@@ -47,7 +47,9 @@ python3 test/unit_test.py
 ## Golang
 
 ### Install
-`go get -u github.com/singnet/snet-ecosystem-contracts`
+```bash
+go get -u github.com/singnet/snet-ecosystem-contracts
+```
 
 ### Usage
 
