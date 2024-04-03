@@ -1,0 +1,9 @@
+include snet/contracts/resources/abi/*
+include snet/contracts/resources/bytecode/*
+include snet/contracts/resources/networks/*
+include snet/contracts/resources/networks/converter/AGIX/*
+include snet/contracts/resources/networks/converter/CGV/*
+include snet/contracts/resources/networks/converter/NTX/*
+include snet/contracts/resources/networks/converter/RJV/*
+include version.py
+include requirements.txt
