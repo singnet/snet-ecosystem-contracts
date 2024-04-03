@@ -26,5 +26,6 @@ setup(
     python_requires='>=3.10',
     install_requires=[
         'web3==6.11.1',
-    ]
+    ],
+    include_package_data=True
 )
