@@ -1,6 +1,6 @@
 import json
 import os
-from pathlib import PurePath
+from pathlib import Path, PurePath
 from typing import Any
 
 from eth_typing import BlockNumber
@@ -8,7 +8,7 @@ import web3
 
 from web3.contract.contract import Contract
 
-import snet.contracts as contracts
+from snet import contracts
 
 RESOURCES_PATH = PurePath(os.path.dirname(contracts.__file__)).joinpath("resources")
 
@@ -35,3 +35,21 @@ def get_contract_deployment_block(w3: web3.Web3, contract_file: str) -> BlockNum
         if w3.net.version in [1, 5, 11155111]:
             raise Exception("Transaction hash not found for deployed mpe contract")
         return 0
+
+
+def get_contract_def(contract_name, contract_artifacts_root=RESOURCES_PATH):
+    contract_def = {}
+    with open(Path(__file__).absolute().parent.joinpath(contract_artifacts_root, "abi",
+                                                        f"{contract_name}.json")) as f:
+        contract_def["abi"] = json.load(f)
+    if os.path.isfile(Path(__file__).absolute().parent.joinpath(contract_artifacts_root, "networks",
+                                                                f"{contract_name}.json")):
+        with open(Path(__file__).absolute().parent.joinpath(contract_artifacts_root, "networks",
+                                                            f"{contract_name}.json")) as f:
+            contract_def["networks"] = json.load(f)
+    return contract_def
+
+
+def get_all_abi_contract_files():
+    contracts = Path(RESOURCES_PATH.joinpath("abi")).glob("*json")
+    return [*contracts]
