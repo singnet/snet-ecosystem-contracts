@@ -1,0 +1,78 @@
+{
+    "1": {
+        "events": {
+            "": {
+                "anonymous": false,
+                "inputs": [
+                    {
+                      "indexed": true,
+                      "internalType": "address",
+                      "name": "tokenHolder",
+                      "type": "address"
+                    },
+                    {
+                      "indexed": false,
+                      "internalType": "bytes32",
+                      "name": "conversionId",
+                      "type": "bytes32"
+                    },
+                    {
+                      "indexed": false,
+                      "internalType": "uint256",
+                      "name": "amount",
+                      "type": "uint256"
+                    }
+                ],
+                "name": "ConversionIn",
+                "type": "event"
+            },
+            "": {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "tokenHolder",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "bytes32",
+                        "name": "conversionId",
+                        "type": "bytes32"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint256",
+                        "name": "amount",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "ConversionOut",
+                "type": "event"
+            },
+            "": {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "internalType": "uint256",
+                        "name": "time",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "FixedNativeTokensCommissionClaim",
+                "type": "event"
+            }
+        },
+        "links": {},
+        "address": "",
+        "transactionHash": ""
+    },
+    "11155111": {
+        "events": {},
+        "links": {},
+        "address": "",
+        "transactionHash": ""
+    }
+}
