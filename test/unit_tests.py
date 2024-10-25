@@ -1,6 +1,3 @@
-from pkg_resources import resource_dir
-
-import environs
 import unittest
 import web3
 import os
