@@ -68,25 +68,10 @@ class TestGetContractDefNetworks(unittest.TestCase):
         contract_def = get_contract_def(name)
         self.assertEqual("networks" in contract_def, True)
 
-    # def test_tcm(self):
-    #     name = "TokenConversionManager"
-    #     contract_def = get_contract_def(name)
-    #     self.assertEqual("networks" in contract_def, True)
-
     def test_tst(self):
         name = "TokenStake"
         contract_def = get_contract_def(name)
         self.assertEqual("networks" in contract_def, True)
-
-    # def test_tcm2(self):
-    #     name = "TokenConversionManagerV2"
-    #     contract_def = get_contract_def(name)
-    #     self.assertEqual("networks" in contract_def, True)
-    #
-    # def test_tcm3(self):
-    #     name = "TokenConversionManagerV3"
-    #     contract_def = get_contract_def(name)
-    #     self.assertEqual("networks" in contract_def, True)
 
 
 class TestGetContractDefNegative(unittest.TestCase):
@@ -100,6 +85,14 @@ class TestGetContractDefNegative(unittest.TestCase):
         resources_path = os.path.curdir
         with self.assertRaises(FileNotFoundError):
             contract_def = get_contract_def(name, resources_path)
+
+
+class TestGetAllAbiContractFiles(unittest.TestCase):
+    def test_get_all_abi_contract_files(self):
+        contract_files = get_all_abi_contract_files()
+        right_length = len(contract_names) == len(contract_files)
+        are_all_contracts = all((any((name in str(file)) for name in contract_names)) for file in contract_files)
+        self.assertEqual(right_length and are_all_contracts, True)
 
 if __name__ == '__main__':
     unittest.main()
