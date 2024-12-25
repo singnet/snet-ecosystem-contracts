@@ -9,7 +9,7 @@ Easily get an instance of the contract you need from any SingularityNET product 
 
 Install:
 ```bash
-pip install snet.contracts
+pip install snet-contracts
 ```
 
 Usage:
