@@ -9,6 +9,7 @@ import (
 type SnetContract string
 
 const SingularityNetToken SnetContract = "SingularityNetToken"
+const FetchToken SnetContract = "FetchToken"
 const MultiPartyEscrow SnetContract = "MultiPartyEscrow"
 const Registry SnetContract = "Registry"
 const TokenStake SnetContract = "TokenStake"
