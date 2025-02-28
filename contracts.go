@@ -9,12 +9,13 @@ import (
 type SnetContract string
 
 const SingularityNetToken SnetContract = "SingularityNetToken"
+const FetchToken SnetContract = "FetchToken"
 const MultiPartyEscrow SnetContract = "MultiPartyEscrow"
 const Registry SnetContract = "Registry"
 const TokenStake SnetContract = "TokenStake"
 const TokenConversionManager SnetContract = "TokenConversionManager"
 
-var List = []SnetContract{SingularityNetToken, MultiPartyEscrow, Registry, TokenStake, TokenConversionManager}
+var List = []SnetContract{SingularityNetToken, FetchToken, MultiPartyEscrow, Registry, TokenStake, TokenConversionManager}
 
 //go:embed snet/contracts/resources/abi/*.json
 var abifs embed.FS
