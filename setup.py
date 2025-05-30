@@ -3,7 +3,7 @@ from setuptools import find_namespace_packages, setup
 
 from version import __version__
 
-PACKAGE_NAME = "snet.contracts"
+PACKAGE_NAME = "snet-contracts"
 
 
 this_directory = os.path.abspath(os.path.dirname(__file__))
@@ -19,7 +19,7 @@ requirements = requirements_str.split("\n")
 setup(
     name=PACKAGE_NAME,
     version=__version__,
-    packages=find_namespace_packages(include=['snet.*']),
+    packages=find_namespace_packages(include=['snet*']),
     namespace_packages=['snet'],
     url='https://github.com/singnet/snet-ecosystem-contracts',
     author='SingularityNET Foundation',
