@@ -7,7 +7,7 @@ import web3
 from web3.contract import Contract
 
 # Setup for tests
-provider = web3.HTTPProvider("https://rpc.tornadoeth.cash/eth")
+provider = web3.HTTPProvider("https://ethereum-rpc.publicnode.com")
 w3 = web3.Web3(provider)
 class_check = False
 target_block = 12326815
