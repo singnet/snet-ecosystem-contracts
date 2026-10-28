@@ -35,6 +35,16 @@ Optional: get an instance at the contract address
 token_contract_instance = get_contract_object(w3, "SingularityNetToken" "0x5B7533812759B45C2B44C19e320ba2cD2681b542")
 ```
 
+Get the ABI of a token converter by network id, token name (AGIX, NTX, CGV, RJV, WMTX, FET) and converter address.
+Tokens use different converter versions, so the right ABI is resolved by the deployment address:
+```python
+from snet.contracts import get_converter_abi
+
+abi = get_converter_abi(1, "AGIX", "0x611192364cc6962F433A5dc52cD500A423dd7bE4")  # TokenConversionManager
+abi = get_converter_abi(11155111, "FET", "0xeD3D39b5e2318aA219F51DA57D10a76Dedcc935a")  # TokenConversionManagerV3
+```
+A `ValueError` is raised if the token is unknown or there is no converter of this token with this address in the network.
+
 ### Tests
 
 ```bash
